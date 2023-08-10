@@ -4,4 +4,45 @@ format: html
 editor: visual
 ---
 
-## 
+## task 3
+
+```{r}
+library(tidyverse)
+library(skimr)
+library(GGally)
+```
+
+exploring diamonds dataset
+
+```{r}
+names(diamonds)
+
+dim(diamonds)
+
+head(diamonds)
+
+tail(diamonds)
+
+summary(diamonds)
+
+skimr::skim(diamonds)
+```
+
+ggpairs
+
+```{r}
+ggpairs(data = diamonds)
+```
+
+```{r}
+ggplot(data = diamonds, 
+       aes(x = carat, 
+           y = price)) +
+  geom_point()
+```
+
+```{r}
+ggplot(data = diamonds,
+       aes(x = carat)) +
+  geom_histogram()
+```
