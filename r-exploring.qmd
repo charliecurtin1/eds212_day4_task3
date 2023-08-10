@@ -46,3 +46,14 @@ ggplot(data = diamonds,
        aes(x = carat)) +
   geom_histogram()
 ```
+
+```{r}
+names(diamonds)
+```
+
+```{r}
+ggplot(data = diamonds, 
+       aes(x = clarity,
+           y = price)) +
+  geom_boxplot()
+```
